@@ -1,14 +1,35 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "theme": "system",
-  "permission": {
-    "read": {
-      "*": "allow",
-      "*.env": "deny",
-      "*.env.*": "deny",
-      "*.env.example": "deny",
-      "*nuget.conf*": "deny",
-      "*npmrc*": "deny",
+  "permissions": [
+    {
+      "action": "read",
+      "resource": "*",
+      "effect": "allow"
     },
-  },
+    {
+      "action": "read",
+      "resource": "*.env",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "*.env.*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "*.env.example",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "*nuget.conf*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "*npmrc*",
+      "effect": "deny"
+    }
+  ]
 }

@@ -24,6 +24,7 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
 fi
 
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+export ANDROID_HOME="$ANDROID_SDK_ROOT"
 
 zsh_append_path "$ANDROID_SDK_ROOT/platform-tools"
 zsh_append_path "$ANDROID_SDK_ROOT/emulator"
@@ -32,6 +33,7 @@ zsh_append_path "$HOME/.dotnet/tools"
 zsh_append_path "/home/linuxbrew/.linuxbrew/bin"
 zsh_append_path "$HOME/.sdk/flutter/bin"
 zsh_append_path "$HOME/.nvm/nvm.sh"
+zsh_append_path "$HOME/.local/herlpers"
 
 zsh_export_dir "JAVA_HOME" "/usr/lib/jvm/java-21-openjdk"
 zsh_append_path "$JAVA_HOME/bin"
@@ -45,3 +47,6 @@ eval "$(pa2-skills completion zsh)"
 
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# opencode
+export PATH=/home/pa2/.opencode/bin:$PATH
